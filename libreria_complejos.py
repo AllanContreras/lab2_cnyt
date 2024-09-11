@@ -1,5 +1,5 @@
 import math
-import numpy as np  # Usaremos NumPy para algunas operaciones de matrices
+import numpy as np  
 
 
 
@@ -67,7 +67,11 @@ def norm_complex_vector(v):
 def distance_complex_vectors(v1, v2):
     diff = [(v1[i][0] - v2[i][0], v1[i][1] - v2[i][1]) for i in range(len(v1))]
     return norm_complex_vector(diff)
-
+# Valores  y vectores propios de una matriz
+def eigenvalues_eigenvectors(m):
+    matrix = np.array(m, dtype=complex)
+    values, vectors = np.linalg.eig(matrix)
+    return values, vectors
 # Revisión si una matriz es unitaria
 def is_unitary(matrix):
     adj = adjoint(matrix)
