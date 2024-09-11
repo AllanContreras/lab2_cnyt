@@ -1,44 +1,7 @@
 import math
 import numpy as np  # Usaremos NumPy para algunas operaciones de matrices
 
-# Suma de números complejos
-def sumcomplex(c1, c2):
-    return (c1[0] + c2[0], c1[1] + c2[1])
 
-# Resta de números complejos
-def restcomplex(c1, c2):
-    return (c1[0] - c2[0], c1[1] - c2[1])
-
-# Multiplicación de números complejos
-def multcomplex(c1, c2):
-    real = (c1[0] * c2[0]) - (c1[1] * c2[1])
-    imag = (c1[0] * c2[1]) + (c1[1] * c2[0])
-    return (real, imag)
-
-# División de números complejos
-def divcomplex(c1, c2):
-    denominator = (c2[0]**2) + (c2[1]**2)
-    real = round(((c1[0] * c2[0]) + (c1[1] * c2[1])) / denominator, 2)
-    imag = round(((c2[0] * c1[1]) - (c1[0] * c2[1])) / denominator, 2)
-    return (real, imag)
-
-# Módulo de un número complejo
-def moducomplex(c):
-    return round(math.sqrt((c[0] ** 2) + (c[1] ** 2)), 2)
-
-# Conjugado de un número complejo
-def conjucomplex(c):
-    return (c[0], -c[1])
-
-# Conversión de complejo cartesiano a polar
-def cartesian_to_polar_complex(c):
-    r = round(math.sqrt(c[0]**2 + c[1]**2), 2)
-    theta = round(math.atan2(c[1], c[0]), 2)
-    return (r, theta)
-
-# Fase de un número complejo
-def fasecomplex(c):
-    return round(math.atan2(c[1], c[0]), 2)
 
 # Adición de vectores complejos
 def add_complex_vectors(v1, v2):
