@@ -95,7 +95,15 @@ val1 = cpmx.distance_complex_vectors(v1, v2)
 val2 = cpmx.distance_complex_vectors(v1, v1)
 print(*casos_prueba(val1, 8.12, val2, 0.0))
 print()
+print("Valores y Vectores Propios de una Matriz Compleja")
+matrix_test = [[(4, 0), (1, 0)], [(0, 1), (0, 4)]]
+eigenvalues, eigenvectors = cpmx.eigenvalues_eigenvectors(matrix_test)
 
+print("Valores propios:", eigenvalues)
+print("Vectores propios:")
+for i, vec in enumerate(eigenvectors):
+    print(f"Vector propio {i+1}: {vec}")
+    
 print("Verificar si una Matriz es Unitaria")
 val1 = cpmx.is_unitary_matrix(m1)
 val2 = cpmx.is_unitary_matrix(m2)
