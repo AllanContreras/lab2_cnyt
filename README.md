@@ -169,6 +169,20 @@ def distance_complex_vectors(v1, v2):
     return norm_complex_vector(diff)
 
 ```
+### Cálculo de Valores y Vectores Propios de una Matriz Compleja
+La función eigenvalues_eigenvectors calcula los valores y vectores propios de una matriz compleja
+``` Python
+import numpy as np
+
+def eigenvalues_eigenvectors(m):
+    matrix = np.array(m, dtype=complex)
+    values, vectors = np.linalg.eig(matrix)
+    return values, vectors
+
+
+```
+
+
 
 ### Revisión de si una Matriz es Unitaria
 La función is_unitary_matrix verifica si una matriz compleja es unitaria. Una matriz es unitaria si su producto con su adjunta da como resultado la matriz identidad
